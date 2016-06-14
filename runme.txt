@@ -1,0 +1,14 @@
+SpringToolSuite (STS) was used to develop, build, and debug the assignment.
+
+run> rubiconproject.RubiconProjectMain /Users/sbergonzi/Documents/workspace/java1/input /Users/sbergonzi/Documents/workspace/java1/output.txt
+
+I had issues with the CSV parser and the "is mobile".  I was not sure why it was not parsing correctly.
+
+I was also unclear on the expectation of the keywords attribute and am not sure that 
+was implemented to the requirement.
+
+The logging was in though the output was displaying.  I was thinking it was due to no
+spring.profile.logging values in an application.yml file.
+
+I did not input JUnit test cases for the parsing tests and leveraged debugging through
+STS to support testing.

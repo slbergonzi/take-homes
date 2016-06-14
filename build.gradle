@@ -1,0 +1,29 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile 'org.slf4j:slf4j-simple:1.7.21'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.0.1'
+    
+	compile 'org.projectlombok:lombok:1.16.6'
+	compile 'com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.7.4'
+	compile 'org.json:json:20160212'
+
+
+	compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.googlecode.json-simple:json-simple:1.1'
+	
+    testCompile 'junit:junit:4.12'
+}
+
+
+task execute (type:JavaExec) {
+    main = 'rubiconproject.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    args System.getProperty("exec.args","").split()
+}
